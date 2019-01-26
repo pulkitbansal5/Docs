@@ -1,0 +1,14 @@
+# Line Feed (NewLine) and Carriage Return
+
+Carriage Return (CR)
+A carriage return or cartridge return (CR) is a control character or mechanism used to reset a device's position to the beginning of a line 
+of text. It is closely associated with the line feed and newline concepts.
+
+Originally, the term "carriage return" referred to a mechanism or lever on a typewriter. For machines where the type element was fixed and the paper held in a moving carriage, this lever was operated after typing a line of text to cause the carriage to return to the far right so the type element would be aligned to the left side of the paper.
+
+In computing, the carriage return is one of the control characters in ASCII code, Unicode. It commands a printer, or other output system such as the display of a system console, to move the position of the cursor to the first position on the same line. It was mostly used along with line feed (LF), a move to the next line, so that together they start a new line. Together, this sequence can be referred to as CRLF
+
+Line Feed (New Line/LN)
+Newline or end-of-line or EOL, line feed or line break is a control character that is used to signify the end of a line of text and the start of a new one. Text editors set this special character when pressing the <Enter> key. 
+
+The concepts of line feed (LF) and carriage return (CR) are closely associated, and can be considered either separately or together.
