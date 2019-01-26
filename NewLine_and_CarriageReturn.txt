@@ -1,8 +1,7 @@
 # Line Feed (NewLine) and Carriage Return
 
 Carriage Return (CR)
-A carriage return or cartridge return (CR) is a control character or mechanism used to reset a device's position to the beginning of a line 
-of text. It is closely associated with the line feed and newline concepts.
+A carriage return or cartridge return (CR) is a control character or mechanism used to reset a device's position to the beginning of a line of text. It is closely associated with the line feed and newline concepts.
 
 Originally, the term "carriage return" referred to a mechanism or lever on a typewriter. For machines where the type element was fixed and the paper held in a moving carriage, this lever was operated after typing a line of text to cause the carriage to return to the far right so the type element would be aligned to the left side of the paper.
 
