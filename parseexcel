@@ -1,0 +1,54 @@
+"""This Python program contains the logic to read excel data from an
+excel file and create a dataframe and then dump it to csv
+Author@PulkitBansal
+"""
+import os
+import pandas as pd
+from zipfile import ZipFile
+import tarfile
+import xlrd
+import csv
+
+def ExtractZip():
+    zipath = "D:\Financial_Zipped.zip"
+    with ZipFile(zipath,'r') as zip:
+        zip.printdir()
+
+def ExtractTar():
+    tarpath = "D:\p.tar.gz"
+    outtar = "D:"
+    with tarfile.open(tarpath,'r') as tar:
+        na = tar.getnames()
+        #tar.extractall("D:\.")
+        print(na)
+
+#ExtractTar()
+
+
+
+def ParseExcel():
+    outpath = "D:\mycsv.csv"
+    #output_csv_path = os.path.join(curdir,'mycsv.csv')
+    #Path to Excel file
+    filepath = "D:\Financial Sample.xlsx"
+    #col_names = ['Segment','Country','Product','Discount Band','Units Sold','Manufacturing Price','Sale Price','Gross Sales','Discounts','Sales','COGS','Profit','Date','Month Number','Month Name','Year']
+    df = pd.read_excel(filepath,sheet_name='Sample',header=3)
+    #df.to_csv(outpath)
+    print(df['COGS'])
+
+
+def csv_from_excel():
+    wb = xlrd.open_workbook('D:\Financial Sample.xlsx')
+    sh = wb.sheet_by_name('Sample')
+    your_csv_file = open('D:\your_csv_file.csv', 'w')
+    wr = csv.writer(your_csv_file, quoting=csv.QUOTE_ALL)
+
+    for rownum in range(sh.nrows):
+        wr.writerow(sh.row_values(rownum))
+
+    your_csv_file.close()
+
+# runs the csv_from_excel function:
+csv_from_excel()
+
+#ParseExcel()
